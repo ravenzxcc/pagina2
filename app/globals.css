@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+  
+  --color-gold-400: #d4af66;
+  --color-gold-500: #c5a059; /* text gold */
+  --color-gold-600: #8e6d2f;
+  --color-bg-dark: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-zinc-200;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gold-gradient {
+    background: linear-gradient(135deg, #c5a059 0%, #8e6d2f 100%);
+  }
+  .glass {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
